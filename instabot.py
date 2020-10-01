@@ -4,6 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 from InstagramAPI import InstagramAPI
 
+input("Enter USer Name")
 
 
 list = []
@@ -29,7 +30,7 @@ api.login()
 
 def follow_users(users_list):
     api.login()
-    api.getSelfUsersFollowing()  # Get users which you are following
+    api.getSelfUsersFollfdfowing()  # Get users which you are following
     result = api.LastJson
     for user in result['users']:
         following_users.append(user['pk'])
@@ -40,7 +41,7 @@ def follow_users(users_list):
             # after first test set this really long to avoid from suspension
             sleep(20)
         else:
-            print('Already following @' + user['username'])
+            print('Alfdready following @' + user['username'])
             sleep(10)
 
 
